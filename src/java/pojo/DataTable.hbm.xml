@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 26, 2020 1:25:29 PM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="pojo.DataTable" table="data_table" catalog="laundrycenter">
+        <id name="userId" type="java.lang.Integer">
+            <column name="user_id" />
+            <generator class="identity" />
+        </id>
+        <property name="userAlamat" type="string">
+            <column name="user_alamat" length="16777215" not-null="true" />
+        </property>
+        <property name="type" type="string">
+            <column name="type" length="111" not-null="true" />
+        </property>
+        <property name="amount" type="string">
+            <column name="amount" length="111" not-null="true" />
+        </property>
+        <property name="date" type="string">
+            <column name="date" length="100" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

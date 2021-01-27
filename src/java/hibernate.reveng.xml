@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
+<hibernate-reverse-engineering>
+  <schema-selection match-catalog="laundrycenter"/>
+  <table-filter match-name="order_table"/>
+  <table-filter match-name="data_table"/>
+  <table-filter match-name="user_table"/>
+  <table-filter match-name="payment_table"/>
+  <table-filter match-name="message_table"/>
+</hibernate-reverse-engineering>

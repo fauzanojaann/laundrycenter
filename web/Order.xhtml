@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:h="http://xmlns.jcp.org/jsf/html"
+xmlns:f="http://xmlns.jcp.org/jsf/core"
+xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+<h:head>
+<title>Laundry Center</title>
+<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+</h:head>
+    
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<style type="text/css">
+body
+{ 
+background-image: url(C:/Users/ASUS/Pictures/Laundry/background1.jpg);
+background-repeat: no-repeat;
+background-size: 100%;
+ 
+
+}
+</style>
+<h:body>
+    <h:form id="link">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+<div class="container">
+    <a class="navbar-brand" href="#">Laundry Center</a>
+
+<button class="navbar-toggler" type="button" data-toggle="collapse" datatarget="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" arialabel="Toggle navigation">
+ <span class="navbar-toggler-icon"></span>
+ </button>
+<div class="collapse navbar-collapse" id="navbarResponsive">
+<ul class="navbar-nav ml-auto">
+<li class="nav-item active">
+
+<h:commandLink class="nav-link" value="Back" action="Home?faces-
+redirect=true"/>
+
+</li>
+
+</ul>
+</div>
+</div>
+</nav>
+</h:form>
+
+
+
+<h:form  id="register">
+<h3 class="mt-5">Order Page</h3>
+<div class="form-group">
+<label style=" margin-right:22px" for="First Name">User_ID  :</label>
+<f:ajax event="keyup" render="nameError">
+<h:inputText value="#{dataTable.userId}"/>
+<h:message for="fn" id="nameError" style="color:red"/>
+</f:ajax>
+</div>
+
+<div class="form-group">
+<label style=" margin-right:32px" for="Last Name">Name      :</label>
+<h:inputText value="#{dataTable.type}"/>
+<h:message for="ln" style="color:red"/>
+</div>
+
+
+<div class="form-group">
+<label style=" margin-right:20px" for="Address">Address :</label>
+
+<h:inputText value="#{dataTable.userAlamat}"/>
+<h:message for="address" style="color:red"/>
+</div>
+
+<div class="form-group">
+    <label  style=" margin-right:20px" for="Address">Amount :</label>
+
+<h:inputText value="#{dataTable.amount}"/>
+<h:message for="address" style="color:red"/>
+</div>
+
+<div class="form-group">
+<label style=" margin-right:42px" for="Address">Date : </label>
+
+<h:inputText value="#{dataTable.date}"/>
+<h:message for="address" style="color:red"/>
+</div>
+
+
+
+
+<div class="form-group">
+    <h:commandButton value="Save" action="#{dataTable.save}" />
+
+</div>
+
+
+</h:form>
+
+<ui:define name="js">
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap-datepicker.js"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+$('.datepicker').datepicker({
+
+});
+});
+</script>
+</ui:define>
+</h:body>
+</html>

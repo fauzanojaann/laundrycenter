@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Order Table</title>
+    </h:head>
+    <h:body>
+         <h:form id="getbyid">
+            <h:panelGrid columns="2">
+                Order ID: <h:inputText value="#{orderTable.orderId}"/>
+                <h:commandButton value="Show produk" action="#{orderTable.getbyid}"/>
+                <h:outputText value="#{orderTable.amount}"/>
+                <h:outputText value="#{orderTable.type}"/>
+                <h:outputText value="#{orderTable.price}"/>
+            </h:panelGrid><br></br><br></br>
+        </h:form>
+    </h:body>
+</html>
+

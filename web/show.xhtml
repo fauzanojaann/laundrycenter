@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Data Table</title>
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+    </h:head>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<style type="text/css">
+body
+{ 
+background-image: url(C:/Users/ASUS/Pictures/Laundry/background1.jpg);
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: 100%;
+ 
+
+}
+
+dataTable
+{
+    align-content: center;
+}
+
+
+
+
+</style>
+    <h:body>
+        <h:form id="link">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+<div class="container">
+    <a class="navbar-brand" href="#">Laundry Center</a>
+
+<button class="navbar-toggler" type="button" data-toggle="collapse" datatarget="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" arialabel="Toggle navigation">
+ <span class="navbar-toggler-icon"></span>
+ </button>
+<div class="collapse navbar-collapse" id="navbarResponsive">
+<ul class="navbar-nav ml-auto">
+<li class="nav-item active">
+
+<h:commandLink class="nav-link" value="Return to Home Page" action="Home?faces-redirect=true"/>
+
+</li>
+</ul>
+</div>
+</div>
+</nav>
+</h:form>
+<!-- Page Container -->
+<div class="w3-content w3-margin-top" style="max-width:100%;">
+
+<!-- The Grid -->
+<div class="w3-row-padding">
+
+<!-- Left Column -->
+<div class="w3-third">
+
+<div class="w3-white w3-text-grey w3-card-4">
+    <div class="w3-display-container">
+    </div>
+    </div>
+    </div>
+</div>
+</div>
+
+<br></br>
+<br></br>
+<br></br>
+   
+        <h:dataTable border="1" value="#{dataTable.getallrecords()}" var="p" cellspacing="0" >
+            <h:column>
+                <f:facet name="header">User ID</f:facet>
+                #{p.userId}
+            </h:column>
+        <h:column>                   
+              <f:facet name="header">User Alamat</f:facet>               
+                #{p.userAlamat}
+        </h:column>
+            <h:column>                   
+              <f:facet name="header">Tipe</f:facet>               
+                #{p.type}
+        </h:column>
+            <h:column>                   
+              <f:facet name="header">Jumlah</f:facet>               
+                #{p.amount}
+        </h:column>
+            <h:column>                   
+              <f:facet name="header">Tanggal</f:facet>               
+                #{p.date}
+        </h:column>
+        </h:dataTable>
+    </h:body>
+</html>
+
